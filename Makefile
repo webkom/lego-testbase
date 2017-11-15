@@ -1,10 +1,10 @@
 .PHONY:	build push
 
-IMAGE = abakus
+IMAGE = lego-testbase
 TAG = latest
 
 build:
-	docker build -t abakus/$(IMAGE):$(TAG) .
+	docker build --pull -t abakus/$(IMAGE):$(TAG) .
 
 push:
 	docker push abakus/$(IMAGE):$(TAG)
