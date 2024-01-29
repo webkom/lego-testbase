@@ -1,4 +1,4 @@
-FROM python:3.11
+FROM python:3.12
 
 LABEL org.opencontainers.image.authors="webkom@abakus.no"
 
@@ -9,7 +9,7 @@ RUN curl https://uploader.codecov.io/latest/linux/codecov --output /usr/local/bi
 RUN chmod +x /usr/local/bin/codecov
 
 # Configure Poetry
-ENV POETRY_VERSION=1.4.2
+ENV POETRY_VERSION=1.7.1
 ENV POETRY_HOME=/opt/poetry
 ENV POETRY_VENV=/opt/poetry-venv
 ENV POETRY_CACHE_DIR=/opt/.cache
